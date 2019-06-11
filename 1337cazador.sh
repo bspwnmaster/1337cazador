@@ -23,8 +23,8 @@ do
 		echo "No network interfaces found. Please connect to LAN and try again."
 		exit 0
 	fi
-netrange="$(ip address | grep global | grep "$interface" | cut -d ' ' -f 6)" #ipv4/cidr
-options="$(echo "$count"")" "$interface" "$netrange")" #organize network choices
+	netrange="$(ip address | grep global | grep "$interface" | cut -d ' ' -f 6)" #ipv4/cidr
+	options="$(echo "$count"")" "$interface" "$netrange")" #organize network choices
 done
 }
 
