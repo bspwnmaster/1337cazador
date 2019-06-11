@@ -5,4 +5,4 @@ Command line tools required:
 nmap, searchsploit, xsltproc, firefox, grep, cut, sed, tail. Currently set up to accept user input but can be modified to run on a schedule.
 To download:
 "git clone https://github.com/bspwnmaster/1337cazador.git".
-Future plans located at https://github.com/bspwnmaster/1337cazador/wiki
+Future plans located at https://github.com/bspwnmaster/1337cazador/wiki.
