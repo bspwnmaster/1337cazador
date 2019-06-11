@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo "  __ ____ ____ ______                     _            ";
+echo " /_ |___ \___ \____  |                   | |           ";
+echo "  | | __) |__) |  / /__ __ _ ______ _  __| | ___  _ __ ";
+echo "  | ||__ <|__ <  / / __/ _\` |_  / _\` |/ _\` |/ _ \| '__|";
+echo "  | |___) |__) |/ / (_| (_| |/ / (_| | (_| | (_) | |   ";
+echo "  |_|____/____//_/ \___\__,_/___\__,_|\__,_|\___/|_|   ";
+echo "                                                       ";
+echo "                                                       ";
+
 present_net () {
 ip="$(ip address | grep global | cut -d ' ' -f 6)" #ipv4 addresses
 interfaces="$(ip address | grep up | cut -d ' ' -f 2 | sed 's/://g' | grep -v lo)" #network interfaces
