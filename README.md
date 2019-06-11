@@ -6,5 +6,5 @@ nmap, searchsploit, xsltproc, firefox, grep, cut, sed, tail. Currently set up to
 To download:
 "git clone https://github.com/bspwnmaster/1337cazador.git".
 To run:
-"chmod +x 1337cazador.sh" to setup and "./1337cazador.sh" to run
+"chmod +x 1337cazador.sh" to setup and "./1337cazador.sh" to run.
 Future plans located at https://github.com/bspwnmaster/1337cazador/wiki.
