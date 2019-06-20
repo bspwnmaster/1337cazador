@@ -4,10 +4,17 @@ Tested on Kali Linux.
 Currently set up to accept user input but can be modified to run on a schedule.
 ### Command line tools required:
 * nmap, searchsploit, xsltproc, firefox, grep, cut, sed, tail. 
-### To download: 
+### To download default nse used:
+* "git clone https://github.com/OCSAF/freevulnsearch.git"
+* "cd freevulnsearch/"
+* "cp freevulnsearch.nse /usr/share/nmap/scripts"
+* "cd /usr/share/nmap/scripts"
+* "nmap --script-updatedb" 
+### To download an run 1337cazador: 
 * "git clone https://github.com/bspwnmaster/1337cazador.git".
-* "cd 1337cazador"
-* "chmod +x 1337cazador.sh" to make script executable and "./1337cazador.sh" to run.
+* "cd 1337cazador/"
+* "chmod +x 1337cazador.sh" to make script executable 
+* "./1337cazador.sh" to run
 ### Default options:
 * Nmap scripts and options can be changed to whatever is desired inside the script. 
 * By default the scan contains verbose options and the freevulnsearch nse script to search for CVEs. 
