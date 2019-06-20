@@ -1,5 +1,5 @@
 # 1337cazador
-Automate network discovery, service scanning, and vulnerability discovery with a single script. Uses freevulnsearch nse for CVE association and searchspoit to display potential exploits. Tested on Kali Linux. Currently set up to accept user input but can be modified to run on a schedule. Does some unique live nmap xml manipulation to show scan progress.
+Automate network discovery, service scanning, and vulnerability discovery with a single scalable script. Uses freevulnsearch nse for CVE association and searchspoit to display potential exploits. Tested on Kali Linux. Currently set up to accept user input but can be modified to run on a schedule. Does some unique live nmap xml manipulation to show scan progress.
 ### Command line tools required:
 * nmap, searchsploit, xsltproc, firefox, grep, cut, sed, tail. 
 ### To download default nse used:
