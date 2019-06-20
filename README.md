@@ -8,7 +8,7 @@ Automate network discovery, service scanning, and vulnerability discovery with a
 * "cp freevulnsearch.nse /usr/share/nmap/scripts"
 * "cd /usr/share/nmap/scripts"
 * "nmap --script-updatedb" 
-### To download an run 1337cazador: 
+### To download and run 1337cazador: 
 * "git clone https://github.com/bspwnmaster/1337cazador.git".
 * "cd 1337cazador/"
 * "chmod +x 1337cazador.sh" to make script executable 
