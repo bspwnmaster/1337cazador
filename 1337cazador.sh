@@ -13,7 +13,7 @@ present_net () {
 ip="$(ip address | grep global | cut -d ' ' -f 6)" #ipv4 addresses
 interfaces="$(ip address | grep up | cut -d ' ' -f 2 | sed 's/://g' | grep -v lo)" #network interfaces
 count=0 #initialize interface count
-echo "Choose network to scan by entering the corresponding number:"
+echo "Choose network to scan by entering the corresponding number or type Z to enter custom target:"
 for interface in $interfaces #goes through each online interface 
 do
 	if [ "$interface" ] #the interface exists
@@ -33,12 +33,18 @@ echo $options #display network options
 read answer #accept user input
 selection="$(echo $options | grep $answer)" #grabs entire chosen line
 selectionnum="$(echo $options | cut -d ' ' -f 1 | grep $answer)" #grabs chosen selection number
-if [ -z "$selectionnum" ] #if selectionnum is empty
+targetnet="$(echo $selection | cut -d ' ' -f 3)" #grabs chosen network
+if [ "$answer" == "Z" ] #if user inputs Z
+then
+	echo "Enter target:"
+	read target #accept user input
+	custom="$(echo $target)" #custom target not in LAN
+	targetnet=$custom #overwrite value
+elif [ -z "$selectionnum" ] #if selectionnum is empty
 then 
 	echo "Invalid selection. Please try again"
 	exit 0
 fi
-targetnet="$(echo $selection | cut -d ' ' -f 3)" #grabs chosen network
 }
 
 commence_scan () { #gets $targetnet from user_answer
