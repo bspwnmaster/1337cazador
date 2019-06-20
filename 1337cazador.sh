@@ -50,7 +50,7 @@ fi
 commence_scan () { #gets $targetnet from user_answer
 clear #cleans up terminal
 echo "Commencing scan against" $targetnet
-nmap -sV --stats-every 3s "$targetnet" -oX result.xml >/dev/null 2>&1 & #sends task to background,xml output
+nmap -sV --version-all -O --osscan-guess --stats-every 3s --script freevulnsearch "$targetnet" -oX result.xml >/dev/null 2>&1 & #sends task to background,xml output
 nmappid=$! #gets pid of nmap so tail knows when to stop
 tail -F -n 0 --pid=$nmappid result.xml 2>/dev/null | grep --line-buffered Scan | cut -d '"' -f 2,6 --output-delimiter=' ' #outputs live scan type and percent complete
 }
